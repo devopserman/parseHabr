@@ -39,7 +39,7 @@ $a = $_POST['page'];
 	
 	<div class="container">
 		<div class="row">
-			<div id="result_form2">123</div> 
+			<div id="result_form2"></div> 
 			<div id="result_form"></div> 
 		</div>
 		
