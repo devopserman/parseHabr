@@ -9,13 +9,7 @@ $a = $_POST['page'];
 
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<style>
-			a {
-
-			
-		   }
-
 		   a.page-link:hover, div.parse:hover {
-
 		   cursor:pointer;}
 		</style>
 	</head>
@@ -45,11 +39,8 @@ $a = $_POST['page'];
 		
 		<div id="paginator"></div>
 	</div>	
-		
 	
-	<script>
-	
-
+<script>
 	
 $( document ).ready(function() {
 	if ($("#page").val() == '' || $("#page").val() < 1 )
@@ -58,11 +49,7 @@ $( document ).ready(function() {
 	{ 			$("#allpage").val(1);		}
 	$("#action").val('');
 
-
-	//showDescription('result_form2', 70, 'descr.php');
-	sendAjaxForm('result_form', 'ajax_form', 'core.php');
-
-		
+	sendAjaxForm('result_form', 'ajax_form', 'core.php');	
 	 
 	function sendAjaxForm(result_form, ajax_form, url) {
 		$.ajax({
@@ -76,9 +63,7 @@ $( document ).ready(function() {
 				for (var j=0; j < result.posts.count; j++){
 				
 					text +='<div class="card">  <div class="card-body"><a target="_blank" href="https://habr.com/ru/post/'+result.posts[j].post_id+'/"><h4>'+result.posts[j].id+'. '+result.posts[j].title+'</h4></a>'+result.posts[j].short+'';
-			
 					text += '<br /><button class="podrobno" id="" v="'+result.posts[j].id+'">Подробнее</button>';
-					
 					text += '</div></div>';
 					
 				}
@@ -87,8 +72,7 @@ $( document ).ready(function() {
 				var res = '';
 				res += '<nav aria-label="Page navigation example"><ul class="pagination">';
 				
-				
-				
+
 				if (result.page > 1) {
 					res += '<li class="page-item"><a id="anc-1" class="page-link" v="1"> << </a></li> ';		
 				}
@@ -158,22 +142,6 @@ $( document ).ready(function() {
 		   
 		   sendAjaxForm('result_form', 'ajax_form', 'core.php');
 		});
-		
-		
-		//$('.podrobno').click(function() { ????
-		//Document.getElementsByClassName
-		// $('.podrobno').onClick(function () {
-			
-		
-			
-			// var btn = document.getElementsByClassName("podrobno")[0];
-			// btn.Click(function () {
-		// var id = ($(this).attr('v'));  
-		   // alert(id);
-		   // //showDescription('result_form2', id, 'descr.php');
-		//});
-
-
 	
 });
 	$(document).ready(function() {

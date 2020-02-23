@@ -173,9 +173,10 @@ if (isset($_POST["action"]) && ($_POST["action"] == 'parse')) {
 
 }
 
-
-if (isset($_GET['page']) && filter_var($_GET['page'], FILTER_VALIDATE_INT)) {
-	$page = (int)$_GET["page"];
+if (isset($_POST['page']) && filter_var($_POST['page'], FILTER_VALIDATE_INT)) {
+	$page = (int)$_POST["page"];
+// if (isset($_GET['page']) && filter_var($_GET['page'], FILTER_VALIDATE_INT)) {
+	// $page = (int)$_GET["page"];
 }else{
 	$page = 1;
 }
